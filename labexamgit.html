@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/siddh/redux-counter/online-library/labexamgit.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+
+<h3>Course Registration</h3>
+<select id="courseSelect">
+  <option>CS101 - Programming</option>
+  <option>CS102 - Data Structures</option>
+  <option>CS103 - DBMS</option>
+</select>
+<button onclick="addCourse()">Register</button>
+
+<p><b>Registered Courses:</b></p>
+<ul id="courseList"></ul>
+
+<hr>
+
+<h3>Event Calendar (Simple)</h3>
+<input type="date" id="eventDate">
+<input type="text" id="eventTitle" placeholder="Event title">
+<button onclick="addEvent()">Add Event</button>
+
+<p><b>Events:</b></p>
+<ul id="eventList"></ul>
+
+<script>
+function addCourse() {
+  let c = document.getElementById("courseSelect").value;
+  let li = document.createElement("li");
+  li.textContent = c;
+  document.getElementById("courseList").appendChild(li);
+}
+
+function addEvent() {
+  let d = document.getElementById("eventDate").value;
+  let t = document.getElementById("eventTitle").value;
+  let li = document.createElement("li");
+  li.textContent = d + " - " + t;
+  document.getElementById("eventList").appendChild(li);
+}
+</script>
+
+
+
+</body></html>

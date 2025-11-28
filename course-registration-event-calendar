@@ -1,0 +1,78 @@
+COURSE REGISTRATION AND EVENT CALENDER:
+
+1. Program :
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Course Registration</h3>
+<select id="courseSelect">
+  <option>CS101 - Programming</option>
+  <option>CS102 - Data Structures</option>
+  <option>CS103 - DBMS</option>
+</select>
+<button onclick="addCourse()">Register</button>
+
+<ul id="courseList"></ul>
+
+<hr>
+
+<h3>Event Calendar</h3>
+<input type="date" id="eventDate">
+<input type="text" id="eventTitle" placeholder="Event title">
+<button onclick="addEvent()">Add Event</button>
+
+<ul id="eventList"></ul>
+
+<script>
+function addCourse() {
+  let c = document.getElementById("courseSelect").value;
+  let li = document.createElement("li");
+  li.textContent = c;
+  document.getElementById("courseList").appendChild(li);
+}
+
+function addEvent() {
+  let d = document.getElementById("eventDate").value;
+  let t = document.getElementById("eventTitle").value;
+  let li = document.createElement("li");
+  li.textContent = d + " - " + t;
+  document.getElementById("eventList").appendChild(li);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+2.  How This Code Works
+Course Registration Section
+
+A <select> dropdown contains a list of courses.
+
+The Register button calls the function addCourse().
+
+This function creates a new <li> and appends it to the <ul id="courseList">.
+
+This mimics simple course registration.
+
+Event Calendar Section
+
+A date input (<input type="date">)
+
+A text input for event title
+
+The Add Event button calls addEvent()
+
+This adds a new <li> to <ul id="eventList">
+
+This mimics storing events with date + title.
+
+
+
+git branch -M main
+git push -u origin main
